@@ -199,7 +199,7 @@
             ]
         },
         {
-            "name": "Driving",
+            "name": "Tank",
             "id": "32bf7300-a961-49e4-b7c0-c3b4e595ec63",
             "actions": [
                 {
@@ -219,7 +219,7 @@
                     "interactions": ""
                 },
                 {
-                    "name": "Brake",
+                    "name": "Fire",
                     "type": "Button",
                     "id": "cea85822-b0f3-4b82-933e-789eeefa2691",
                     "expectedControlType": "",
@@ -248,7 +248,7 @@
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "AD",
+                    "name": "Keyboard AD",
                     "id": "6f1f9267-872e-4976-946d-70236aeccaf8",
                     "path": "1DAxis",
                     "interactions": "",
@@ -281,7 +281,7 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "Arrows",
+                    "name": "Keyboard Arrows",
                     "id": "5038a150-2b9a-4763-829e-597e614ac8ec",
                     "path": "1DAxis",
                     "interactions": "",
@@ -314,37 +314,103 @@
                     "isPartOfComposite": true
                 },
                 {
-                    "name": "",
-                    "id": "920bef31-1f8b-4015-915c-1ea9875ff074",
+                    "name": "CombinedTrigger",
+                    "id": "15211195-9d42-4a35-b025-45834c858cee",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "57da9870-0cef-44ec-9310-2bdd4d48684b",
+                    "path": "<Gamepad>/leftTrigger",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "08ca9cc6-3dd2-4f5b-8c92-5aec52a6e6e4",
                     "path": "<Gamepad>/rightTrigger",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Gas",
                     "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Keyboard WS",
+                    "id": "0119ffa3-a4c3-4350-a252-92041d88a864",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "c9502445-13eb-4d43-85fb-77c3169d53ed",
+                    "name": "negative",
+                    "id": "b2d2cdfa-890c-46c7-b647-b99a536296c7",
+                    "path": "<Keyboard>/s",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "8af256ab-211c-40e5-b23e-8031479e39ed",
                     "path": "<Keyboard>/w",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Gas",
                     "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "Keyboard Arrows",
+                    "id": "61346221-1c07-4108-9605-117cb4d3da6c",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas",
+                    "isComposite": true,
                     "isPartOfComposite": false
                 },
                 {
-                    "name": "",
-                    "id": "52525af6-632a-487c-8df9-3ab9cc8ce90e",
+                    "name": "negative",
+                    "id": "dcc8a214-0517-4188-9853-d7afab4d72bd",
+                    "path": "<Keyboard>/downArrow",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "827347ed-8385-41db-9ad0-b422e760da45",
                     "path": "<Keyboard>/upArrow",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
                     "action": "Gas",
                     "isComposite": false,
-                    "isPartOfComposite": false
+                    "isPartOfComposite": true
                 },
                 {
                     "name": "",
@@ -353,18 +419,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "afe3f5d2-8e82-4b10-9c30-24dcbe68c0b7",
-                    "path": "<Keyboard>/s",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Brake",
+                    "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -375,18 +430,7 @@
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Brake",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "30c1abcb-1e98-4885-96b1-282e3a0ad2b0",
-                    "path": "<Keyboard>/downArrow",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Brake",
+                    "action": "Fire",
                     "isComposite": false,
                     "isPartOfComposite": false
                 },
@@ -405,109 +449,6 @@
                     "name": "",
                     "id": "cae85c41-32e8-4c1f-8018-a874c59ba1b3",
                     "path": "<Keyboard>/e",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "ExitVehicle",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                }
-            ]
-        },
-        {
-            "name": "Helicopter",
-            "id": "e7ca52f9-a6c3-4fe4-9c4d-d278dca9fa6b",
-            "actions": [
-                {
-                    "name": "Move",
-                    "type": "Button",
-                    "id": "f51af259-db7a-478c-8133-06bfe5c4b1f9",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Up",
-                    "type": "Button",
-                    "id": "fb6d9dd0-0355-413e-a8fa-193f653330d0",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Down",
-                    "type": "Button",
-                    "id": "743a8ec4-62e5-4e17-acdd-b61715441fd6",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "Rotate",
-                    "type": "Button",
-                    "id": "a268646b-430e-4d53-90d0-ac259b4faa85",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": ""
-                },
-                {
-                    "name": "ExitVehicle",
-                    "type": "Button",
-                    "id": "31c80d44-ffee-498c-8343-78761b21e081",
-                    "expectedControlType": "",
-                    "processors": "",
-                    "interactions": ""
-                }
-            ],
-            "bindings": [
-                {
-                    "name": "",
-                    "id": "276e4481-44fc-4d2b-bf7a-54b3b05235b8",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Move",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "b26ba605-02e8-497a-a680-feed222ae3e8",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Up",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "8f142d7a-7011-4044-acb7-eee7ca505dc1",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Down",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "06b1b961-4606-453e-b545-7493f5a2d8e0",
-                    "path": "",
-                    "interactions": "",
-                    "processors": "",
-                    "groups": "",
-                    "action": "Rotate",
-                    "isComposite": false,
-                    "isPartOfComposite": false
-                },
-                {
-                    "name": "",
-                    "id": "f99f9d79-45a8-4c9e-bf1f-7ff8bfbf18d0",
-                    "path": "",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

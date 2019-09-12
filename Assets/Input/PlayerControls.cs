@@ -211,7 +211,7 @@ public class PlayerControls : IInputActionCollection
             ]
         },
         {
-            ""name"": ""Driving"",
+            ""name"": ""Tank"",
             ""id"": ""32bf7300-a961-49e4-b7c0-c3b4e595ec63"",
             ""actions"": [
                 {
@@ -231,7 +231,7 @@ public class PlayerControls : IInputActionCollection
                     ""interactions"": """"
                 },
                 {
-                    ""name"": ""Brake"",
+                    ""name"": ""Fire"",
                     ""type"": ""Button"",
                     ""id"": ""cea85822-b0f3-4b82-933e-789eeefa2691"",
                     ""expectedControlType"": """",
@@ -260,7 +260,7 @@ public class PlayerControls : IInputActionCollection
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": ""AD"",
+                    ""name"": ""Keyboard AD"",
                     ""id"": ""6f1f9267-872e-4976-946d-70236aeccaf8"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
@@ -293,7 +293,7 @@ public class PlayerControls : IInputActionCollection
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": ""Arrows"",
+                    ""name"": ""Keyboard Arrows"",
                     ""id"": ""5038a150-2b9a-4763-829e-597e614ac8ec"",
                     ""path"": ""1DAxis"",
                     ""interactions"": """",
@@ -326,37 +326,103 @@ public class PlayerControls : IInputActionCollection
                     ""isPartOfComposite"": true
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""920bef31-1f8b-4015-915c-1ea9875ff074"",
+                    ""name"": ""CombinedTrigger"",
+                    ""id"": ""15211195-9d42-4a35-b025-45834c858cee"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Gas"",
+                    ""isComposite"": true,
+                    ""isPartOfComposite"": false
+                },
+                {
+                    ""name"": ""negative"",
+                    ""id"": ""57da9870-0cef-44ec-9310-2bdd4d48684b"",
+                    ""path"": ""<Gamepad>/leftTrigger"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Gas"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""08ca9cc6-3dd2-4f5b-8c92-5aec52a6e6e4"",
                     ""path"": ""<Gamepad>/rightTrigger"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Gas"",
                     ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Keyboard WS"",
+                    ""id"": ""0119ffa3-a4c3-4350-a252-92041d88a864"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Gas"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""c9502445-13eb-4d43-85fb-77c3169d53ed"",
+                    ""name"": ""negative"",
+                    ""id"": ""b2d2cdfa-890c-46c7-b647-b99a536296c7"",
+                    ""path"": ""<Keyboard>/s"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Gas"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""8af256ab-211c-40e5-b23e-8031479e39ed"",
                     ""path"": ""<Keyboard>/w"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Gas"",
                     ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""Keyboard Arrows"",
+                    ""id"": ""61346221-1c07-4108-9605-117cb4d3da6c"",
+                    ""path"": ""1DAxis"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Gas"",
+                    ""isComposite"": true,
                     ""isPartOfComposite"": false
                 },
                 {
-                    ""name"": """",
-                    ""id"": ""52525af6-632a-487c-8df9-3ab9cc8ce90e"",
+                    ""name"": ""negative"",
+                    ""id"": ""dcc8a214-0517-4188-9853-d7afab4d72bd"",
+                    ""path"": ""<Keyboard>/downArrow"",
+                    ""interactions"": """",
+                    ""processors"": """",
+                    ""groups"": """",
+                    ""action"": ""Gas"",
+                    ""isComposite"": false,
+                    ""isPartOfComposite"": true
+                },
+                {
+                    ""name"": ""positive"",
+                    ""id"": ""827347ed-8385-41db-9ad0-b422e760da45"",
                     ""path"": ""<Keyboard>/upArrow"",
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
                     ""action"": ""Gas"",
                     ""isComposite"": false,
-                    ""isPartOfComposite"": false
+                    ""isPartOfComposite"": true
                 },
                 {
                     ""name"": """",
@@ -365,18 +431,7 @@ public class PlayerControls : IInputActionCollection
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Brake"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""afe3f5d2-8e82-4b10-9c30-24dcbe68c0b7"",
-                    ""path"": ""<Keyboard>/s"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Brake"",
+                    ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -387,18 +442,7 @@ public class PlayerControls : IInputActionCollection
                     ""interactions"": """",
                     ""processors"": """",
                     ""groups"": """",
-                    ""action"": ""Brake"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""30c1abcb-1e98-4885-96b1-282e3a0ad2b0"",
-                    ""path"": ""<Keyboard>/downArrow"",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Brake"",
+                    ""action"": ""Fire"",
                     ""isComposite"": false,
                     ""isPartOfComposite"": false
                 },
@@ -425,109 +469,6 @@ public class PlayerControls : IInputActionCollection
                     ""isPartOfComposite"": false
                 }
             ]
-        },
-        {
-            ""name"": ""Helicopter"",
-            ""id"": ""e7ca52f9-a6c3-4fe4-9c4d-d278dca9fa6b"",
-            ""actions"": [
-                {
-                    ""name"": ""Move"",
-                    ""type"": ""Button"",
-                    ""id"": ""f51af259-db7a-478c-8133-06bfe5c4b1f9"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Up"",
-                    ""type"": ""Button"",
-                    ""id"": ""fb6d9dd0-0355-413e-a8fa-193f653330d0"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Down"",
-                    ""type"": ""Button"",
-                    ""id"": ""743a8ec4-62e5-4e17-acdd-b61715441fd6"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""Rotate"",
-                    ""type"": ""Button"",
-                    ""id"": ""a268646b-430e-4d53-90d0-ac259b4faa85"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """"
-                },
-                {
-                    ""name"": ""ExitVehicle"",
-                    ""type"": ""Button"",
-                    ""id"": ""31c80d44-ffee-498c-8343-78761b21e081"",
-                    ""expectedControlType"": """",
-                    ""processors"": """",
-                    ""interactions"": """"
-                }
-            ],
-            ""bindings"": [
-                {
-                    ""name"": """",
-                    ""id"": ""276e4481-44fc-4d2b-bf7a-54b3b05235b8"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Move"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""b26ba605-02e8-497a-a680-feed222ae3e8"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Up"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""8f142d7a-7011-4044-acb7-eee7ca505dc1"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Down"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""06b1b961-4606-453e-b545-7493f5a2d8e0"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""Rotate"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                },
-                {
-                    ""name"": """",
-                    ""id"": ""f99f9d79-45a8-4c9e-bf1f-7ff8bfbf18d0"",
-                    ""path"": """",
-                    ""interactions"": """",
-                    ""processors"": """",
-                    ""groups"": """",
-                    ""action"": ""ExitVehicle"",
-                    ""isComposite"": false,
-                    ""isPartOfComposite"": false
-                }
-            ]
         }
     ],
     ""controlSchemes"": []
@@ -537,19 +478,12 @@ public class PlayerControls : IInputActionCollection
         m_Walking_Movement = m_Walking.GetAction("Movement");
         m_Walking_Jump = m_Walking.GetAction("Jump");
         m_Walking_EnterVehicle = m_Walking.GetAction("EnterVehicle");
-        // Driving
-        m_Driving = asset.GetActionMap("Driving");
-        m_Driving_Steering = m_Driving.GetAction("Steering");
-        m_Driving_Gas = m_Driving.GetAction("Gas");
-        m_Driving_Brake = m_Driving.GetAction("Brake");
-        m_Driving_ExitVehicle = m_Driving.GetAction("ExitVehicle");
-        // Helicopter
-        m_Helicopter = asset.GetActionMap("Helicopter");
-        m_Helicopter_Move = m_Helicopter.GetAction("Move");
-        m_Helicopter_Up = m_Helicopter.GetAction("Up");
-        m_Helicopter_Down = m_Helicopter.GetAction("Down");
-        m_Helicopter_Rotate = m_Helicopter.GetAction("Rotate");
-        m_Helicopter_ExitVehicle = m_Helicopter.GetAction("ExitVehicle");
+        // Tank
+        m_Tank = asset.GetActionMap("Tank");
+        m_Tank_Steering = m_Tank.GetAction("Steering");
+        m_Tank_Gas = m_Tank.GetAction("Gas");
+        m_Tank_Fire = m_Tank.GetAction("Fire");
+        m_Tank_ExitVehicle = m_Tank.GetAction("ExitVehicle");
     }
 
     ~PlayerControls()
@@ -645,44 +579,44 @@ public class PlayerControls : IInputActionCollection
     }
     public WalkingActions @Walking => new WalkingActions(this);
 
-    // Driving
-    private readonly InputActionMap m_Driving;
-    private IDrivingActions m_DrivingActionsCallbackInterface;
-    private readonly InputAction m_Driving_Steering;
-    private readonly InputAction m_Driving_Gas;
-    private readonly InputAction m_Driving_Brake;
-    private readonly InputAction m_Driving_ExitVehicle;
-    public struct DrivingActions
+    // Tank
+    private readonly InputActionMap m_Tank;
+    private ITankActions m_TankActionsCallbackInterface;
+    private readonly InputAction m_Tank_Steering;
+    private readonly InputAction m_Tank_Gas;
+    private readonly InputAction m_Tank_Fire;
+    private readonly InputAction m_Tank_ExitVehicle;
+    public struct TankActions
     {
         private PlayerControls m_Wrapper;
-        public DrivingActions(PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Steering => m_Wrapper.m_Driving_Steering;
-        public InputAction @Gas => m_Wrapper.m_Driving_Gas;
-        public InputAction @Brake => m_Wrapper.m_Driving_Brake;
-        public InputAction @ExitVehicle => m_Wrapper.m_Driving_ExitVehicle;
-        public InputActionMap Get() { return m_Wrapper.m_Driving; }
+        public TankActions(PlayerControls wrapper) { m_Wrapper = wrapper; }
+        public InputAction @Steering => m_Wrapper.m_Tank_Steering;
+        public InputAction @Gas => m_Wrapper.m_Tank_Gas;
+        public InputAction @Fire => m_Wrapper.m_Tank_Fire;
+        public InputAction @ExitVehicle => m_Wrapper.m_Tank_ExitVehicle;
+        public InputActionMap Get() { return m_Wrapper.m_Tank; }
         public void Enable() { Get().Enable(); }
         public void Disable() { Get().Disable(); }
         public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(DrivingActions set) { return set.Get(); }
-        public void SetCallbacks(IDrivingActions instance)
+        public static implicit operator InputActionMap(TankActions set) { return set.Get(); }
+        public void SetCallbacks(ITankActions instance)
         {
-            if (m_Wrapper.m_DrivingActionsCallbackInterface != null)
+            if (m_Wrapper.m_TankActionsCallbackInterface != null)
             {
-                Steering.started -= m_Wrapper.m_DrivingActionsCallbackInterface.OnSteering;
-                Steering.performed -= m_Wrapper.m_DrivingActionsCallbackInterface.OnSteering;
-                Steering.canceled -= m_Wrapper.m_DrivingActionsCallbackInterface.OnSteering;
-                Gas.started -= m_Wrapper.m_DrivingActionsCallbackInterface.OnGas;
-                Gas.performed -= m_Wrapper.m_DrivingActionsCallbackInterface.OnGas;
-                Gas.canceled -= m_Wrapper.m_DrivingActionsCallbackInterface.OnGas;
-                Brake.started -= m_Wrapper.m_DrivingActionsCallbackInterface.OnBrake;
-                Brake.performed -= m_Wrapper.m_DrivingActionsCallbackInterface.OnBrake;
-                Brake.canceled -= m_Wrapper.m_DrivingActionsCallbackInterface.OnBrake;
-                ExitVehicle.started -= m_Wrapper.m_DrivingActionsCallbackInterface.OnExitVehicle;
-                ExitVehicle.performed -= m_Wrapper.m_DrivingActionsCallbackInterface.OnExitVehicle;
-                ExitVehicle.canceled -= m_Wrapper.m_DrivingActionsCallbackInterface.OnExitVehicle;
+                Steering.started -= m_Wrapper.m_TankActionsCallbackInterface.OnSteering;
+                Steering.performed -= m_Wrapper.m_TankActionsCallbackInterface.OnSteering;
+                Steering.canceled -= m_Wrapper.m_TankActionsCallbackInterface.OnSteering;
+                Gas.started -= m_Wrapper.m_TankActionsCallbackInterface.OnGas;
+                Gas.performed -= m_Wrapper.m_TankActionsCallbackInterface.OnGas;
+                Gas.canceled -= m_Wrapper.m_TankActionsCallbackInterface.OnGas;
+                Fire.started -= m_Wrapper.m_TankActionsCallbackInterface.OnFire;
+                Fire.performed -= m_Wrapper.m_TankActionsCallbackInterface.OnFire;
+                Fire.canceled -= m_Wrapper.m_TankActionsCallbackInterface.OnFire;
+                ExitVehicle.started -= m_Wrapper.m_TankActionsCallbackInterface.OnExitVehicle;
+                ExitVehicle.performed -= m_Wrapper.m_TankActionsCallbackInterface.OnExitVehicle;
+                ExitVehicle.canceled -= m_Wrapper.m_TankActionsCallbackInterface.OnExitVehicle;
             }
-            m_Wrapper.m_DrivingActionsCallbackInterface = instance;
+            m_Wrapper.m_TankActionsCallbackInterface = instance;
             if (instance != null)
             {
                 Steering.started += instance.OnSteering;
@@ -691,100 +625,27 @@ public class PlayerControls : IInputActionCollection
                 Gas.started += instance.OnGas;
                 Gas.performed += instance.OnGas;
                 Gas.canceled += instance.OnGas;
-                Brake.started += instance.OnBrake;
-                Brake.performed += instance.OnBrake;
-                Brake.canceled += instance.OnBrake;
+                Fire.started += instance.OnFire;
+                Fire.performed += instance.OnFire;
+                Fire.canceled += instance.OnFire;
                 ExitVehicle.started += instance.OnExitVehicle;
                 ExitVehicle.performed += instance.OnExitVehicle;
                 ExitVehicle.canceled += instance.OnExitVehicle;
             }
         }
     }
-    public DrivingActions @Driving => new DrivingActions(this);
-
-    // Helicopter
-    private readonly InputActionMap m_Helicopter;
-    private IHelicopterActions m_HelicopterActionsCallbackInterface;
-    private readonly InputAction m_Helicopter_Move;
-    private readonly InputAction m_Helicopter_Up;
-    private readonly InputAction m_Helicopter_Down;
-    private readonly InputAction m_Helicopter_Rotate;
-    private readonly InputAction m_Helicopter_ExitVehicle;
-    public struct HelicopterActions
-    {
-        private PlayerControls m_Wrapper;
-        public HelicopterActions(PlayerControls wrapper) { m_Wrapper = wrapper; }
-        public InputAction @Move => m_Wrapper.m_Helicopter_Move;
-        public InputAction @Up => m_Wrapper.m_Helicopter_Up;
-        public InputAction @Down => m_Wrapper.m_Helicopter_Down;
-        public InputAction @Rotate => m_Wrapper.m_Helicopter_Rotate;
-        public InputAction @ExitVehicle => m_Wrapper.m_Helicopter_ExitVehicle;
-        public InputActionMap Get() { return m_Wrapper.m_Helicopter; }
-        public void Enable() { Get().Enable(); }
-        public void Disable() { Get().Disable(); }
-        public bool enabled => Get().enabled;
-        public static implicit operator InputActionMap(HelicopterActions set) { return set.Get(); }
-        public void SetCallbacks(IHelicopterActions instance)
-        {
-            if (m_Wrapper.m_HelicopterActionsCallbackInterface != null)
-            {
-                Move.started -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnMove;
-                Move.performed -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnMove;
-                Move.canceled -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnMove;
-                Up.started -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnUp;
-                Up.performed -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnUp;
-                Up.canceled -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnUp;
-                Down.started -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnDown;
-                Down.performed -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnDown;
-                Down.canceled -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnDown;
-                Rotate.started -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnRotate;
-                Rotate.performed -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnRotate;
-                Rotate.canceled -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnRotate;
-                ExitVehicle.started -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnExitVehicle;
-                ExitVehicle.performed -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnExitVehicle;
-                ExitVehicle.canceled -= m_Wrapper.m_HelicopterActionsCallbackInterface.OnExitVehicle;
-            }
-            m_Wrapper.m_HelicopterActionsCallbackInterface = instance;
-            if (instance != null)
-            {
-                Move.started += instance.OnMove;
-                Move.performed += instance.OnMove;
-                Move.canceled += instance.OnMove;
-                Up.started += instance.OnUp;
-                Up.performed += instance.OnUp;
-                Up.canceled += instance.OnUp;
-                Down.started += instance.OnDown;
-                Down.performed += instance.OnDown;
-                Down.canceled += instance.OnDown;
-                Rotate.started += instance.OnRotate;
-                Rotate.performed += instance.OnRotate;
-                Rotate.canceled += instance.OnRotate;
-                ExitVehicle.started += instance.OnExitVehicle;
-                ExitVehicle.performed += instance.OnExitVehicle;
-                ExitVehicle.canceled += instance.OnExitVehicle;
-            }
-        }
-    }
-    public HelicopterActions @Helicopter => new HelicopterActions(this);
+    public TankActions @Tank => new TankActions(this);
     public interface IWalkingActions
     {
         void OnMovement(InputAction.CallbackContext context);
         void OnJump(InputAction.CallbackContext context);
         void OnEnterVehicle(InputAction.CallbackContext context);
     }
-    public interface IDrivingActions
+    public interface ITankActions
     {
         void OnSteering(InputAction.CallbackContext context);
         void OnGas(InputAction.CallbackContext context);
-        void OnBrake(InputAction.CallbackContext context);
-        void OnExitVehicle(InputAction.CallbackContext context);
-    }
-    public interface IHelicopterActions
-    {
-        void OnMove(InputAction.CallbackContext context);
-        void OnUp(InputAction.CallbackContext context);
-        void OnDown(InputAction.CallbackContext context);
-        void OnRotate(InputAction.CallbackContext context);
+        void OnFire(InputAction.CallbackContext context);
         void OnExitVehicle(InputAction.CallbackContext context);
     }
 }

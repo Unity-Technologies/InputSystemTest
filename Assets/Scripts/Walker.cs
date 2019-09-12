@@ -8,19 +8,15 @@ using UnityEngine.InputSystem;
 public class Walker : MonoBehaviour
 {
     CharacterController m_CharacterController;
+    Transform m_Transform;
 
     PlayerControls m_Controls;
     Vector2 m_Move;
     float m_YSpeed;
-    JumpState m_JumpState = JumpState.None;
+    bool m_IsJumping;
     float m_JumpTimer;
-    
-    enum JumpState
-    {
-        None,
-        Up,
-        Down
-    }
+
+    Tank m_VehicleToEnter = null;
 
     public float moveSpeed = 2f;
     public float jumpSpeed = 1.5f;
@@ -29,6 +25,7 @@ public class Walker : MonoBehaviour
     void Awake()
     {
         m_CharacterController = GetComponent<CharacterController>();
+        m_Transform = GetComponent<Transform>();
 
         m_Controls = new PlayerControls();
 
@@ -38,8 +35,12 @@ public class Walker : MonoBehaviour
         m_Controls.Walking.Jump.performed += ctx => OnJumpStart();
         m_Controls.Walking.Jump.canceled += ctx => OnJumpStop();
 
+        m_Controls.Walking.EnterVehicle.performed += ctx => EnterVehicle();
+
         jumpSpeed = Mathf.Abs(jumpSpeed);
         m_YSpeed = -jumpSpeed;
+
+        m_Controls.Walking.Enable();
     }
 
     void Update()
@@ -51,9 +52,9 @@ public class Walker : MonoBehaviour
 
     void OnJumpStart()
     {
-        if (m_CharacterController.isGrounded && m_JumpState == JumpState.None)
+        if (m_CharacterController.isGrounded && m_IsJumping == false)
         {
-            m_JumpState = JumpState.Up;
+            m_IsJumping = true;
             m_YSpeed = jumpSpeed;
             m_JumpTimer = 0f;
         }
@@ -61,7 +62,7 @@ public class Walker : MonoBehaviour
 
     void OnJumpStop()
     {
-        if (m_JumpState == JumpState.Up)
+        if (m_IsJumping)
         {
             StopJump();
         }
@@ -69,14 +70,14 @@ public class Walker : MonoBehaviour
 
     void StopJump()
     {
-        m_JumpState = JumpState.Down;
+        m_IsJumping = false;
         m_YSpeed = -jumpSpeed;
     }
 
     // This relies on deltaTime. It must go in the update loop.
     void UpdateJumpState()
     {
-        if (m_JumpState == JumpState.Up)
+        if (m_IsJumping)
         {
             m_JumpTimer += Time.deltaTime;
 
@@ -85,19 +86,25 @@ public class Walker : MonoBehaviour
                 StopJump();
             }
         }
-        if (m_JumpState == JumpState.Down && m_CharacterController.isGrounded)
-        {
-            m_JumpState = JumpState.None;
-        }
     }
 
-    void OnEnable()
+    void OnTriggerEnter(Collider other)
     {
-        m_Controls.Walking.Enable();
+        Tank NewVehicle = other.attachedRigidbody?.GetComponent<Tank>();
+        if (NewVehicle != null)
+            m_VehicleToEnter = NewVehicle;
     }
 
-    void OnDisable()
+    void EnterVehicle()
     {
+        m_VehicleToEnter.RiderEnter(this);
+        m_CharacterController.enabled = false;
         m_Controls.Walking.Disable();
+    }
+
+    public void ExitVehicle()
+    {
+        m_CharacterController.enabled = true;
+        m_Controls.Walking.Enable();
     }
 }
