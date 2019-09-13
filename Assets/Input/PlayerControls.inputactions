@@ -154,6 +154,17 @@
                 },
                 {
                     "name": "",
+                    "id": "7f07e1df-7baf-480a-b4c4-1657f1639a8e",
+                    "path": "*/{Primary2DAxis}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Movement",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "4f6a359d-566b-47ad-b955-61c3744b69e1",
                     "path": "<Gamepad>/buttonSouth",
                     "interactions": "",
@@ -176,6 +187,17 @@
                 },
                 {
                     "name": "",
+                    "id": "16afa32b-cbae-47f3-a11a-826dada558ad",
+                    "path": "*/{TriggerButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Jump",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "82dcbf27-ba6b-4984-a2bf-9dd36c6555e9",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -189,6 +211,17 @@
                     "name": "",
                     "id": "4128bb30-08bd-4b76-afa7-91477591bb3b",
                     "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "EnterVehicle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "072dd282-0dae-48e6-963f-a5403b0c3d68",
+                    "path": "*/{Primary2DAxisClick}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
@@ -314,6 +347,17 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "",
+                    "id": "0543904b-a304-478c-8e1f-649c6684283b",
+                    "path": "*/{Primary2DAxis}/x",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Steering",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
                     "name": "CombinedTrigger",
                     "id": "15211195-9d42-4a35-b025-45834c858cee",
                     "path": "1DAxis",
@@ -413,6 +457,39 @@
                     "isPartOfComposite": true
                 },
                 {
+                    "name": "XR CombinedTrigger",
+                    "id": "9c1ea9d9-61d4-4190-8ac9-315d14b93d1c",
+                    "path": "1DAxis",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Gas",
+                    "isComposite": true,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "negative",
+                    "id": "c540dc95-fd10-4522-9d88-e77f363df03e",
+                    "path": "*/{Grip}",
+                    "interactions": "",
+                    "processors": "AxisDeadzone(min=0.1,max=1)",
+                    "groups": "",
+                    "action": "Gas",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
+                    "name": "positive",
+                    "id": "cede6af8-fd91-4667-94c1-70a859f45d4e",
+                    "path": "*/{Trigger}",
+                    "interactions": "",
+                    "processors": "AxisDeadzone(min=0.1,max=1)",
+                    "groups": "",
+                    "action": "Gas",
+                    "isComposite": false,
+                    "isPartOfComposite": true
+                },
+                {
                     "name": "",
                     "id": "98b999d1-ecd0-4424-8b0b-accccc783a9f",
                     "path": "<Gamepad>/buttonSouth",
@@ -436,6 +513,17 @@
                 },
                 {
                     "name": "",
+                    "id": "72a2dfec-e891-4077-969d-f42a7c5d7818",
+                    "path": "*/{PrimaryButton}",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Fire",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
                     "id": "0a3f333c-c23f-4ee1-b79f-5dcd6438711f",
                     "path": "<Gamepad>/buttonEast",
                     "interactions": "",
@@ -449,6 +537,17 @@
                     "name": "",
                     "id": "cae85c41-32e8-4c1f-8018-a874c59ba1b3",
                     "path": "<Keyboard>/e",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "ExitVehicle",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "c1ae91d6-bc2e-4b33-8f62-75aaa732d23b",
+                    "path": "*/{Primary2DAxisClick}",
                     "interactions": "",
                     "processors": "",
                     "groups": "",

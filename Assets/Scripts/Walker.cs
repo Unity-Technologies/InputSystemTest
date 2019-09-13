@@ -45,9 +45,11 @@ public class Walker : MonoBehaviour
 
     void Update()
     {
-        m_CharacterController.Move(new Vector3(moveSpeed * m_Move.x, m_YSpeed, moveSpeed * m_Move.y) * Time.deltaTime);
-
-        UpdateJumpState();
+        if (m_CharacterController.enabled)
+        {
+            m_CharacterController.Move(new Vector3(moveSpeed * m_Move.x, m_YSpeed, moveSpeed * m_Move.y) * Time.deltaTime);
+            UpdateJumpState();
+        }
     }
 
     void OnJumpStart()
@@ -97,6 +99,9 @@ public class Walker : MonoBehaviour
 
     void EnterVehicle()
     {
+        if (m_VehicleToEnter == null)
+            return;
+
         m_VehicleToEnter.RiderEnter(this);
         m_CharacterController.enabled = false;
         m_Controls.Walking.Disable();

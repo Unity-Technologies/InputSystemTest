@@ -34,10 +34,26 @@ public class Tank : MonoBehaviour
 
         m_Controls = new PlayerControls();
 
-        m_Controls.Tank.Steering.performed += ctx => m_Steering = ctx.ReadValue<float>();
-        m_Controls.Tank.Steering.canceled += ctx => m_Steering = 0f;
-        m_Controls.Tank.Gas.performed += ctx => m_Gas = ctx.ReadValue<float>();
-        m_Controls.Tank.Gas.canceled += ctx => m_Gas = 0f;
+        m_Controls.Tank.Steering.performed += ctx =>
+        {
+            m_Steering = ctx.ReadValue<float>();
+            Debug.Log("performed: m_Steering set to " + m_Steering);
+        };
+        m_Controls.Tank.Steering.canceled += ctx =>
+        {
+            m_Steering = 0f;
+            Debug.Log("canceled: m_Steering set to " + m_Steering);
+        };
+        m_Controls.Tank.Gas.performed += ctx =>
+        {
+            m_Gas = ctx.ReadValue<float>();
+            Debug.Log("canceled: m_Gas set to " + m_Gas);
+        };
+        m_Controls.Tank.Gas.canceled += ctx => 
+        {
+            m_Gas = 0f;
+            Debug.Log("canceled: m_Gas set to " + m_Gas);
+        };
 
         m_Controls.Tank.Fire.performed += ctx => FireBullet();
 
@@ -84,7 +100,6 @@ public class Tank : MonoBehaviour
         m_Rider = NewRider;
 
         m_Controls.Tank.Enable();
-        Debug.Log("RiderEnter");
     }
 
     public void RiderExit(Walker OldRider)
@@ -97,6 +112,5 @@ public class Tank : MonoBehaviour
         }
 
         m_Controls.Tank.Disable();
-        Debug.Log("RiderExit");
     }
 }
